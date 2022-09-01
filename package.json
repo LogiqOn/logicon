@@ -1,10 +1,20 @@
 {
   "name": "@logicon/root",
   "private": true,
+  "scripts": {
+    "commit": "./node_modules/cz-customizable/standalone.js"
+  },
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
+    "cz-conventional-changelog": "3.3.0",
+    "cz-customizable": "^6.9.2",
     "lerna": "^5.4.0"
+  },
+  "config": {
+    "cz-customizable": {
+      "config": "config/cz-config.js"
+    }
   }
 }
