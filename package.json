@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "commit": "./node_modules/cz-customizable/standalone.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint --ext .ts,.tsx",
+    "format": "prettier --check ."
   },
   "workspaces": [
     "packages/*"
@@ -20,5 +22,17 @@
     "cz-customizable": {
       "config": "config/cz-config.js"
     }
+  },
+  "dependencies": {
+    "@types/node": "^18.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "prettier": "^2.7.1"
   }
 }
